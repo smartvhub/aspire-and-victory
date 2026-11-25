@@ -567,3 +567,60 @@ footer .creator-credit {
                   }
    .hero-character{top:auto!important;bottom:60px!important}
 .hero-3d-accent{display:none!important}
+/* AV SERVICES PAGE — CARD RESTORE FIX */
+
+.service-stack {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  align-items: center;
+  min-height: 520px;
+}
+
+.service-stack .service-card {
+  position: relative;
+  width: auto;
+  min-height: 310px;
+  margin: 0;
+  display: block;
+  flex: initial;
+}
+
+.service-stack .service-card p {
+  display: none !important;
+}
+
+.service-stack .service-card.active p {
+  display: block !important;
+}
+
+/* MOBILE: all seven cards remain accessible */
+@media (max-width: 760px) {
+  .service-stack {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 20px 9vw 70px;
+    min-height: auto;
+  }
+
+  .service-stack .service-card,
+  .service-stack .service-card:nth-child(n) {
+    grid-column: 1;
+    grid-row: auto;
+    width: 100%;
+    min-height: 175px;
+    margin: 0;
+    transform: none;
+    border-radius: 28px;
+  }
+
+  .service-stack .service-card.active {
+    grid-column: 1;
+    transform: none;
+    min-height: 245px;
+  }
+
+  .service-stack .service-card h2 {
+    margin-top: 35px;
+  }
+}
