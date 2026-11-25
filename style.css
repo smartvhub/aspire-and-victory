@@ -565,4 +565,5 @@ footer .creator-credit {
 @media(prefers-reduced-motion:reduce){
   .hero-character,.hero-3d-accent span,.about-3d-object{animation:none}
                   }
-   
+   .hero-character{top:auto!important;bottom:60px!important}
+.hero-3d-accent{display:none!important}
